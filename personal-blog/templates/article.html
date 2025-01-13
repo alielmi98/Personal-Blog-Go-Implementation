@@ -1,0 +1,21 @@
+{{define "title"}}{{.BlogTitle}} - {{.Data.Title}}{{end}}
+
+{{define "content"}}
+<div class="row">
+    <div class="col-md-12">
+        <article>
+            <header class="mb-4">
+                <h1>{{.Data.Title}}</h1>
+                <h6 class="text-muted">Published Date: {{.Data.CreatedAt.Format "2006-01-02"}}</h6>
+                {{if not .Data.ModifiedAt.IsZero}}
+                    <h6 class="text-muted">
+                        Updated Date: {{.Data.ModifiedAt.Format "2006-01-02"}}
+                    </h6>
+                {{end}}
+            </header>
+            <p>{{.Data.Content}}</p>
+        </article>
+        <a href="/" class="btn btn-primary mt-4">Return to Homepage</a>
+    </div>
+</div>
+{{end}}

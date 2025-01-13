@@ -1,0 +1,30 @@
+{{define "title"}}Admin Dashboard{{end}}
+
+{{define "content"}}
+<header class="bg-primary text-white p-3">
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <a class="text-white" href="/"> Home </a>
+            <a class="text-white" href="/logout">Logout </a>
+        </nav>
+    </div>
+</header>
+<main class="container mt-5">
+    <h2>Articles</h2>
+    <a class="btn btn-success mb-3" href="/admin/articles/create">Create Article</a>
+    <ul class="list-group">
+        {{ range  $article := .Data }}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                {{ $article.ID}}- <strong>{{ $article.Title }}</strong> - {{ $article.CreatedAt.Format "2006-01-02"}} 
+            </div>
+            <div>
+                <a class="btn btn-secondary btn-sm" href="/admin/articles/update/{{ $article.ID }}">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/admin/articles/delete/{{ $article.ID }}">Delete</a>
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+</main>
+{{end}}

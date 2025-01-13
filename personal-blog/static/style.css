@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background: #535353;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+article {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.card {
+    height: 250px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.card-body {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}

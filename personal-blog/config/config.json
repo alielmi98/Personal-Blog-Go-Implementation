@@ -1,0 +1,6 @@
+{
+    "blog_title": "My Personal Blog",
+    "admin_user": "admin",
+    "admin_pass": "123456",
+    "port": "8080"
+}

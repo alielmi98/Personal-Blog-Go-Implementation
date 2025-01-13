@@ -1,0 +1,28 @@
+{{define "title"}}{{.BlogTitle}}{{end}}
+
+{{define "content"}}
+
+<header class="hero bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Welcome to Our Blog</h1>
+        <p class="lead">Explore our latest articles and insights.</p>
+    </div>
+</header>
+
+<div class="mt-5">
+    <div class="row">
+        {{range .Data}}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title"><a href="/article/{{.ID}}">{{.Title}}</a></h2>
+                    <h6 class="card-subtitle mb-2 text-muted">{{.CreatedAt.Format "2006-01-02"}}</h6>
+                    <p class="card-text">{{.Content}}</p>
+                    <a href="/article/{{.ID}}" class="btn btn-primary mt-auto">Read More</a>
+                </div>
+            </div>
+        </div>
+        {{end}}
+    </div>
+</div>
+{{end}}
