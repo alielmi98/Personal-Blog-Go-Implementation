@@ -49,32 +49,34 @@ go run main.go
 
 ```
 personal-blog/
-├── articles/ # Directory for article storage
-│ └── article.json # JSON file for articles (automatically created)
-├── config/ # Configuration files
-│ ├── config.go
-│ └── config.json
-├── dto/ # Data Transfer Objects
-│ └── data_transfer_objects.go
-├── handlers/ # HTTP Handlers
-│ ├── admin.go
-│ ├── guest.go
-│ ├── login_logout.go
-│ └── render.go
-├── middlewares/ # Middleware for authentication
-│ └── middleware.go
-├── services/ # Business logic for article management
-│ └── article_service.go
-├── static/ # Static files (CSS)
-│ └── style.css
-└── templates/ # HTML templates
-├── base.html
-├── dashboard.html
-├── home.html
-├── article.html
-├── login.html
-├── create_article.html
-└── update_article.html
+├── main.go                 # Main entry point of the application
+├── go.mod                  # Go module file
+├── articles/               # Directory for article storage
+│   └── article.json        # JSON file for articles
+├── config/                 # Configuration files
+│   ├── config.go
+│   └── config.json
+├── dto/                    # Data Transfer Objects
+│   └── data_transfer_objects.go
+├── handlers/               # HTTP Handlers
+│   ├── admin.go
+│   ├── guest.go
+│   ├── login_logout.go
+│   └── render.go
+├── middlewares/            # Middleware for authentication
+│   └── middleware.go
+├── services/               # Business logic for article management
+│   └── article_service.go
+├── static/                 # Static files (CSS)
+│   └── style.css
+└── templates/              # HTML templates
+    ├── base.html
+    ├── dashboard.html
+    ├── home.html
+    ├── article.html
+    ├── login.html
+    ├── create_article.html
+    └── update_article.html
 ```
 
 ## Acknowledgments
