@@ -8,7 +8,7 @@ import (
 	"github.com/alielmi98/Personal-Blog-Go-Implementation/dto"
 )
 
-// RenderTemplate renders HTML templates
+// RenderTemplate renders tmpl templates
 func RenderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
 	blogTitle := config.AppConfig.BlogTitle
 
@@ -17,7 +17,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
 		Data:      data,
 	}
 
-	t := template.Must(template.ParseFiles("templates/base.html", tmpl))
+	t := template.Must(template.ParseFiles("templates/base.tmpl", tmpl))
 	if err := t.Execute(w, templateData); err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}

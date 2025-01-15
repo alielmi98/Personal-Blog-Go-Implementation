@@ -26,7 +26,7 @@ func (h *AdminHandler) DashboardHandler(w http.ResponseWriter, r *http.Request) 
 	}
 
 	// Render the dashboard with loaded articles
-	RenderTemplate(w, "templates/dashboard.html", articles)
+	RenderTemplate(w, "templates/dashboard.tmpl", articles)
 }
 
 // CreateArticleHandler handles the creation of new articles
@@ -45,7 +45,7 @@ func (h *AdminHandler) CreateArticleHandler(w http.ResponseWriter, r *http.Reque
 		return
 	}
 
-	RenderTemplate(w, "templates/create_article.html", nil)
+	RenderTemplate(w, "templates/create_article.tmpl", nil)
 }
 
 // UpdateArticleHandler handles editing existing articles
@@ -80,7 +80,7 @@ func (h *AdminHandler) UpdateArticleHandler(w http.ResponseWriter, r *http.Reque
 		return
 	}
 
-	RenderTemplate(w, "templates/update_article.html", article)
+	RenderTemplate(w, "templates/update_article.tmpl", article)
 }
 
 // DeleteArticleHandler handles the deletion of articles

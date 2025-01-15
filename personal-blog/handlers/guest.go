@@ -32,7 +32,7 @@ func (h *GuestHandler) HomeHandler(w http.ResponseWriter, r *http.Request) {
 		truncatedArticles = append(truncatedArticles, article)
 	}
 
-	RenderTemplate(w, "templates/home.html", truncatedArticles)
+	RenderTemplate(w, "templates/home.tmpl", truncatedArticles)
 }
 
 func (h *GuestHandler) ArticleHandler(w http.ResponseWriter, r *http.Request) {
@@ -49,7 +49,7 @@ func (h *GuestHandler) ArticleHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	RenderTemplate(w, "templates/article.html", article)
+	RenderTemplate(w, "templates/article.tmpl", article)
 }
 
 func truncate(content string, length int) string {

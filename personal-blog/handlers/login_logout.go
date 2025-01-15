@@ -22,12 +22,12 @@ func LoginHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Render login page with error message
-		RenderTemplate(w, "templates/login.html", map[string]interface{}{
+		RenderTemplate(w, "templates/login.tmpl", map[string]interface{}{
 			"Error": "Invalid username or password"})
 
 		return
 	}
-	RenderTemplate(w, "templates/login.html", nil)
+	RenderTemplate(w, "templates/login.tmpl", nil)
 }
 
 func LogoutHandler(w http.ResponseWriter, r *http.Request) {

@@ -64,19 +64,19 @@ personal-blog/
 │   ├── login_logout.go
 │   └── render.go
 ├── middlewares/            # Middleware for authentication
-│   └── middleware.go
+│   └── auth.go
 ├── services/               # Business logic for article management
 │   └── article_service.go
 ├── static/                 # Static files (CSS)
 │   └── style.css
 └── templates/              # HTML templates
-    ├── base.html
-    ├── dashboard.html
-    ├── home.html
-    ├── article.html
-    ├── login.html
-    ├── create_article.html
-    └── update_article.html
+    ├── base.tmpl
+    ├── dashboard.tmpl
+    ├── home.tmpl
+    ├── article.tmpl
+    ├── login.tmpl
+    ├── create_article.tmpl
+    └── update_article.tmpl
 ```
 
 ## Acknowledgments
